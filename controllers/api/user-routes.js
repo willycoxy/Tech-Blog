@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment, Vote } = require('../../models');
+const { User, Post, Comment} = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -35,8 +35,6 @@ router.get('/:id', (req, res) => {
       {
         model: Post,
         attributes: ['title'],
-        through: Vote,
-        as: 'voted_posts'
       }
     ]
   })
@@ -116,9 +114,6 @@ router.post('/logout', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-
-  // pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
     where: {
