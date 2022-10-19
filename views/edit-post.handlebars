@@ -6,15 +6,15 @@
   <form class="edit-post-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{format_url post.post_content}})</span>
+       <input name="post-content" type="text" value="{{post.post_content}}" />
     </div>
     <div>
    by you on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button type="submit" class="btn btn-primary">Save post</button>
+    <button type="button" class="delete-post-btn btn btn-primary">Delete post</button>
   </form>
 </article>
 
@@ -24,7 +24,7 @@
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button type="submit" class="btn btn-primary">add comment</button>
   </div>
 </form>
 
