@@ -8,7 +8,6 @@ CMS-style blog site, where you can publis articles, blog posts and thoughts and 
 * CSS
 * JavaScript
 * Boostrap
-* Socket.io
 * Handlebars.js
 * Node.js
 
@@ -16,3 +15,4 @@ CMS-style blog site, where you can publis articles, blog posts and thoughts and 
 * Will
 
 ## Website
+https://willtech-blog.herokuapp.com/
